@@ -4,14 +4,16 @@ interface IceCream {
   instructions?: string
 }
 
-let myIceCream: IceCream = {
+let myIceCream: Sundae = {
   flavor: 'vanilla',
   scoops: 2,
+  sauce: 'chocolate',
+  nuts: true
 }
 
 console.log(myIceCream.flavor)
 
-function tooManyScoops(dessert: IceCream) {
+function tooManyScoops(dessert: Sundae) {
   if(dessert.scoops >= 5) {
     return `${dessert.scoops} is too many scoops!`
   } else {
@@ -19,4 +21,4 @@ function tooManyScoops(dessert: IceCream) {
   }
 }
 
-console.log(tooManyScoops({flavor: 'vanilla', scoops: 5}))
+console.log(tooManyScoops({flavor: 'vanilla', scoops: 5, sauce: 'caramel'}))
